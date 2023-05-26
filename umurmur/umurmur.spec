@@ -42,7 +42,7 @@ make install DESTDIR=%{buildroot}
 
 # needed on el7+ using systemd
 %{__mkdir_p} %{buildroot}/etc/tmpfiles.d
-echo "d /var/run/umurmur 775 umurmur umurmur" > %{buildroot}/etc/tmpfiles.d/%{name}.conf
+echo "d /run/umurmur 775 umurmur umurmur" > %{buildroot}/etc/tmpfiles.d/%{name}.conf
 %{__mkdir_p} %{buildroot}/etc/systemd/system/
 %{__cp} %{SOURCE1} %{buildroot}/etc/systemd/system/umurmurd.service
 

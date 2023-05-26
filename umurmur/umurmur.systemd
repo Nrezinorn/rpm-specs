@@ -6,8 +6,8 @@ After=network-online.target time-sync.target
 [Service]
 User=umurmur
 Type=simple
-PIDFile=/var/run/umurmur/umurmurd.pid
-ExecStart=/usr/bin/umurmurd -c /etc/umurmur.conf -p /var/run/umurmur/umurmurd.pid
+PIDFile=/run/umurmur/umurmurd.pid
+ExecStart=/usr/bin/umurmurd -c /etc/umurmur.conf -p /run/umurmur/umurmurd.pid
 
 [Install]
 WantedBy=multi-user.target
